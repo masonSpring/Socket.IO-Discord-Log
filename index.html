@@ -1,0 +1,67 @@
+<!--Conversions-->
+<!--By Mason Spring-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HackJA - Discord API Sockets Integration - Mason Spring</title>
+    <style>
+        body {
+            font-size: 20px;
+            font-family: 'Arial';
+
+        }
+    </style>
+
+
+</head>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+
+
+<body>
+
+    <script>
+        var socket = io();
+
+        $(function () {
+
+
+
+
+
+            socket.on('chat message', function (msg, color) {
+                $('#messages').append($(
+                    '<li href="#" onclick="(function(_this){_this.parentNode.removeChild(_this);})(this);" style="color:' +
+                    color + '">').text(msg));
+            });
+
+
+        })
+    </script>
+
+    <h1>Discord API Sockets.IO Integration</h1>
+    <dl id="messages" style="list-style-type:none"></dl>
+    <br>
+
+    <h4>Features Include:</h4>
+    <ol>
+        <li>Tracking of message creation/editing/deletion</li>
+        <li>Tracking of channel creation/renaming/deletion</li>
+        <li>Tracking of user typing (starting/stopping)</li>
+        <li>Tracking of channel pins</li>
+        <li>Tracking of message reactions</li>
+        <li>Tracking of custom emoji creation/deletion</li>
+    </ol>
+
+    <!--Credit-->
+    <br>
+    <span>Created by <a style="color:blue" href="https://masonspring.com">Mason Spring</a> for HackJA 2019</span>
+
+
+
+</body>
+
+</html>
