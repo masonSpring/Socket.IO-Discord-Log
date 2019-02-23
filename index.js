@@ -117,7 +117,7 @@ let prefix = "-";
 
 
 
-client.login('NTQ4NjYwMzE5NzU3NjY0MjU2.D1IjVA.Z70z3leMU_ZtA-5gkk1oWhEMTNg');
+client.login('REMOVED');
 
 http.listen(3000, function () {
   console.log('listening on *:3000');
